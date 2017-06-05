@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Height of each list item -->
+    <dimen name="title_size_small">16sp</dimen>
+    <!-- Height of each list item -->
+    <dimen name="score_text_size">32sp</dimen>
+
+    <!-- Default padding for scores -->
+    <dimen name="padding_small">4dp</dimen>
+    <!-- Medium padding -->
+    <dimen name="padding_medium">8dp</dimen>
+    <!-- Large padding -->
+    <dimen name="padding_large">12dp</dimen>
+
+</resources>

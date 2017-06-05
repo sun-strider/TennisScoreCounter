@@ -5,22 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.android.tennisscorecounter.R;
-
 import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String ONE_POINT = "15";
-    final String TWO_POINTS = "30";
-    final String THREE_POINTS = "40";
-    final String ADVANTAGE = "advantage";
+    private final String ONE_POINT = "15";
+    private final String TWO_POINTS = "30";
+    private final String THREE_POINTS = "40";
+    private final String ADVANTAGE = "advantage";
 
-    int gamePointsPlayerA = 0;
-    int gamePointsPlayerB = 0;
-    int setNr = 1;
-    int setScorePlayerA = 0;
-    int setScorePlayerB = 0;
+    private int gamePointsPlayerA = 0;
+    private int gamePointsPlayerB = 0;
+    private int setNr = 1;
+    private int setScorePlayerA = 0;
+    private int setScorePlayerB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
      * Function to increases the Set score for respective player by 1 points.
      */
     public int addSetScore(int score) throws NoSuchFieldException, IllegalAccessException {
-        score = score + 1;
+        score++;
         return score;
     }
 
