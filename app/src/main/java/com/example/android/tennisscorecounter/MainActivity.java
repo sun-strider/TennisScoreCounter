@@ -128,23 +128,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Displays the Game points for A as is (Integers) -> currently not used
 
-     public void displayGamePointsA(int points) {
-     TextView scoreView = (TextView) findViewById(R.id.game_score_a);
-     scoreView.setText(String.valueOf(points));
-     }
-     */
-
-    /**
-     * Displays the Game points for B as is (Integers) -> currently not used
-
-     public void displayGamePointsB(int points) {
-     TextView scoreView = (TextView) findViewById(R.id.game_score_b);
-     scoreView.setText(String.valueOf(points));
-     }
-     */
 
     /**
      * Displays current Game score for A. Displayed in Tennis Game score values
