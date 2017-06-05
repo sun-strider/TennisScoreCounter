@@ -1,268 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="@dimen/padding_medium"
-                android:text="Player A"
-                android:textColor="@color/colorTextLight"
-                android:textSize="@dimen/title_size_small" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/game_score_a"
-                android:layout_width="match_parent"
+                <TextView
+                    style="@style/ScoreTextViews"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/padding_medium"
+                    android:text="Player A"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="@dimen/title_size_small" />
+
+                <TextView
+                    android:id="@+id/game_score_a"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="addOneForA"
+                    android:text="Point for A" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:onClick="addOneForA"
-                android:text="Point for A" />
+                <TextView
+                    style="@style/ScoreTextViews"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="@dimen/padding_medium"
+                    android:text="Player B"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="@dimen/title_size_small" />
 
+                <TextView
+                    android:id="@+id/game_score_b"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="addOneForB"
+                    android:text="Point for B" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
         <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
             android:background="@android:color/darker_gray" />
 
+        <TextView
+            style="@style/ScoreTextViews"
+            android:fontFamily="sans-serif-medium"
+            android:padding="@dimen/padding_large"
+            android:text="Set Scores"
+            android:textColor="@color/colorTextLight"
+            android:textSize="@dimen/title_size_small" />
+
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center"
-                android:padding="@dimen/padding_medium"
-                android:text="Player B"
-                android:textColor="@color/colorTextLight"
-                android:textSize="@dimen/title_size_small" />
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
 
-            <TextView
-                android:id="@+id/game_score_b"
-                android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/set_score_a1"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <TextView
+                    android:id="@+id/set_score_a2"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <TextView
+                    android:id="@+id/set_score_a3"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <TextView
+                    android:id="@+id/set_score_a4"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <TextView
+                    android:id="@+id/set_score_a5"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:onClick="addOneForB"
-                android:text="Point for B" />
+                <TextView
+                    android:id="@+id/set_score_b1"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
 
+                <TextView
+                    android:id="@+id/set_score_b2"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <TextView
+                    android:id="@+id/set_score_b3"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <TextView
+                    android:id="@+id/set_score_b4"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+                <TextView
+                    android:id="@+id/set_score_b5"
+                    style="@style/ScoreTextViews"
+                    android:text="0"
+                    android:textSize="@dimen/score_text_size" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:onClick="resetScore"
+            android:text="Reset Score" />
 
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:paddingBottom="@dimen/padding_large"
-        android:paddingTop="@dimen/padding_large"
-        android:text="Set Scores"
-        android:textSize="@dimen/title_size_small"
-        android:textColor="@color/colorTextLight" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp">
-
-            <TextView
-                android:id="@+id/set_score_a1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-            <TextView
-                android:id="@+id/set_score_a2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-            <TextView
-                android:id="@+id/set_score_a3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-            <TextView
-                android:id="@+id/set_score_a4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-            <TextView
-                android:id="@+id/set_score_a5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/darker_gray" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp">
-
-            <TextView
-                android:id="@+id/set_score_b1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-            <TextView
-                android:id="@+id/set_score_b2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-            <TextView
-                android:id="@+id/set_score_b3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-            <TextView
-                android:id="@+id/set_score_b4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-            <TextView
-                android:id="@+id/set_score_b5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
-                android:padding="@dimen/padding_small"
-                android:text="0"
-                android:textColor="@color/colorText"
-                android:textSize="@dimen/score_text_size" />
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:onClick="resetScore"
-        android:text="Reset Score" />
-
-</LinearLayout>
+</ScrollView>

@@ -8,4 +8,13 @@
         <item name="colorButtonNormal">#c6ff00</item>
     </style>
 
+    <style name="ScoreTextViews">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
 </resources>
